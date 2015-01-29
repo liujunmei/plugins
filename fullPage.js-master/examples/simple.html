@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js A simple Demo</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage very simple demo." />
+	<meta name="keywords"  content="fullpage,jquery,demo,simple" />
+	<meta name="Resource-type" content="Document" />
+	<link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+    <style type="text/css">
+        .header { width: 100%; height: 100px; background: red; text-align: center; font-size: 18px; }
+        div { line-height: 80px; }
+        .headroom {position: fixed;top: 0;left: 0;right: 0;transition: all .2s ease-in-out;}
+        .headroom--pinned {
+            transform: translateY(0%);
+        }
+        .headroom--unpinned {
+            transform: translateY(-100%);
+        }
+        .wrapper{
+            background-color:#999;
+            height:500px;
+            text-align:center;
+        }
+        .tableContent{
+            display:table;
+            height:500px;
+            background-color:#ffff00;
+            margin:0 auto;
+        }
+
+        .tableContentRow{
+            display:table-row;
+            border:1px solid #000;
+        }
+
+        .tableContentCell{
+            display:table-cell;
+            vertical-align:middle;
+            height:80%;
+            border:1px solid #000;
+        }
+
+        .loginBox{
+            height:100px;
+            background-color:#FFF;
+            width:1140px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header" class="header headroom">headerheaderheader</div>
+<div id="fullpage">
+    <div class="section" id="section2"><h1>No wraps, no extra markup</h1></div>
+    <div class="section" id="section1" style="height: 800px">
+        <div class="wrapper" style="height: 70%; background: green;">
+            <div class="tableContent">
+                <div class="tableContentCell">
+                    <div class="loginBox">
+                        aaa
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper" style="height: 30%; background: blue;">
+            <div class="tableContent">
+                <div class="tableContentCell">
+                    <div class="loginBox">
+                        bbbb
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section0">
+        bbb
+    </div>
+	<div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../jquery.fullPage.js"></script>
+<script type="text/javascript" src="../../headroom/headroom.js"></script>
+<script type="text/javascript" src="../../headroom/jquery.headroom.js"></script>
+<script type="text/javascript" src="../../jquery-mousewheel-master/jquery.mousewheel.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({});
+//        $("#header").headroom({
+//            "offset": 205,
+//            "tolerance": 5,
+//            "classes": {
+//                "initial": "animated",
+//                "pinned": "slideDown",
+//                "unpinned": "slideUp"
+//            }
+//        });
+//        $(window).bind('mousewheel', function(event, delta){
+//            if( delta > 0){
+//                //上滑滚轮
+//                debugger;
+//                $('#header').removeClass('headroom--unpinned').addClass('headroom--pinned');
+//            }else{
+//                //下滑滚轮
+//                $('#header').removeClass('headroom--pinned').addClass('headroom--unpinned');
+//            }
+//        });
+
+    });
+</script>
+</body>
+</html>
